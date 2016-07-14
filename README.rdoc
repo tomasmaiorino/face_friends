@@ -1,0 +1,36 @@
+== README
+
+This README would normally document whatever steps are necessary to get the
+application up and running.
+
+Things you may want to cover:
+
+* Ruby version
+ 2.0
+* System dependencies
+
+* Configuration
+  Need to create two envinronment variables:
+  1 - FACE_FRIENDS_APP_ID=your_facebook_app_id
+  2 - FACE_FRIENDS_TOKEN=your_facebook_secret_id
+  Install both MongoDB and Mysql.
+* Database creation
+  MongoDB:
+    Using a mongo client, run the follwing commands:
+    #create the local database
+    1 - use local
+    #create the frindes collection
+    2 - db.createCollection("friends")
+* Database initialization
+
+* How to run the test suite
+  rake test -v
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+
+Please feel free to use a different markup language if you do not plan to run
+<tt>rake doc:app</tt>.

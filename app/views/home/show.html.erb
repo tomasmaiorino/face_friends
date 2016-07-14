@@ -1,0 +1,23 @@
+<aside class="bg-dark" id="friends">
+    <div class="container text-center">
+        <div class="call-to-action">
+            <% if @friends != nil && !@friends['data'].empty? %>
+            <div class="col-lg-12 text-center">
+              <h2>Here are your friends:</h2>
+                <hr class="primary">
+            </div>
+            <div class="row text-left" >
+                <div class="col-lg-12 col-md-6">
+                  <% @friends['data'].each do |d| %>
+                      <h4><%=d['name']%></h4>
+                  <% end %>
+                </div>
+            </div>
+            <% elsif !current_user %>
+              <h2>Log in to find your facebook friends.</h2>
+            <%else%>
+              <h2>:( Unfortunately you still have  no friends registered in FaceFriends.</h2>
+            <%end%>
+        </div>
+    </div>
+</aside>
